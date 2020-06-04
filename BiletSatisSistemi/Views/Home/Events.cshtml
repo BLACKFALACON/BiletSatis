@@ -1,0 +1,82 @@
+﻿
+
+@{
+    ViewBag.Title = "Events";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="container ">
+    <h2 class="w3-text-light-grey w3-xxlarge w3-allerta  Sleft ">Etkinlikler </h2>
+    <div class="box">
+        @foreach (var filim in Model.FilimAdi)
+        {
+
+            <img src="@Url.Content("~/Images/" +Model.Resim)" />
+
+        }
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="~/Images/sinema2.jpg" />
+            </div>
+            <div class="details yukselt">
+                <h2>Cep Herkülü: Naim Süleymanoğlu</h2>
+                <a href="@Url.Action("Info","Home")"><button type="button" class="btn btn-outline-info ">Bilgi</button> </a>
+                <button type="button" class="btn btn-outline-dark " onclick="openNav()">Bilet Al</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="~/Images/sinema1.png" />
+            </div>
+            <div class="details yukselt">
+                <h2>Jumanji:Yeni Seviye</h2>
+                <a href="@Url.Action("Info","Home")"><button type="button" class="btn btn-outline-info ">Bilgi</button> </a>
+                <button type="button" class="btn btn-outline-dark " onclick="openNav()">Bilet Al</button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="~/Images/sinema3.png" />
+            </div>
+            <div class="details yukselt">
+                <h2>Asfaltın Kralları </h2>
+                <a href="@Url.Action("Info","Home")"><button type="button" class="btn btn-outline-info ">Bilgi</button> </a>
+                <button type="button" class="btn btn-outline-dark " onclick="openNav()">Bilet Al</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="~/Images/sinema4.jpg" />
+            </div>
+            <div class="details yukselt">
+                <h2>Mucize 2 Aşk</h2>
+                <a href="@Url.Action("Info","Home")"><button type="button" class="btn btn-outline-info ">Bilgi</button> </a>
+                <button type="button" class="btn btn-outline-dark " onclick="openNav()">Bilet Al</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="~/Images/sinema5.jpg" />
+            </div>
+            <div class="details yukselt">
+                <h2>Joker</h2>
+                <a href="@Url.Action("Info","Home")"><button type="button" class="btn btn-outline-info ">Bilgi</button> </a>
+                <button type="button" class="btn btn-outline-dark " onclick="openNav()">Bilet Al</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+@Html.Partial("_PartialTicketBuy")
+
+

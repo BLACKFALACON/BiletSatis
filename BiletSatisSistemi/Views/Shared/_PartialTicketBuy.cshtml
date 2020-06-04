@@ -1,0 +1,123 @@
+﻿
+<div id="myNav" class="overlay">
+    <div class="overlay-content">
+        <div class="row">
+
+            <div class="col-sm-4 alcalt">
+                <img src="~/Images/sinema2.jpg" alt="Naim" style=" width:90%; height:50%; margin-left:10%">
+                <h1>Cep Herkülü: Naim Süleymanoğlu</h1>
+                <br />
+                <button type="button" class="btn btn-block btn-outline-light w3-wide" data-toggle="modal" data-target="#myModal">İptal</button>
+            </div>
+
+            <div class="col-sm-8 .content01">
+                <div class="wrap-3">
+                    <input class="input" type="radio" id="tab-3" name="tabs">
+                    <label class="label" for="tab-3"><div style="color:white;">Tarih Ve Gün </div><div class="cross"></div></label>
+                    <div class="contentt">
+                        <p style="text-align:center;">
+                            <button class="w3-button w3-white w3-border">27.12.2019</button>
+                            <button class="w3-button w3-white w3-border">29.12.2019</button>
+                            <button class="w3-button w3-white w3-border">01.01.2020</button>
+                        </p>
+                        <p>
+                            <button class="w3-button w3-white w3-small w3-border w3-border w3-round-xxlarge">11:50</button>
+                            <button class="w3-button w3-white w3-small w3-border w3-border w3-round-xxlarge">14:30</button>
+                            <button class="w3-button w3-white w3-small w3-border w3-border w3-round-xxlarge">16:50</button>
+                            <button class="w3-button w3-white w3-small w3-border w3-border w3-round-xxlarge">19:40</button>
+                            <button class="w3-button w3-white w3-small w3-border w3-border w3-round-xxlarge">22:10</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="wrap-1">
+                    <input class="input" type="radio" id="tab-1" name="tabs">
+                    <label class="label" for="tab-1"><div style="color:white;">Bilet Sayısı </div><div class="cross"></div></label>
+                    <div class="contentt " style=" margin:5px;">
+                            <h2 style="margin-left:30px;">Tam Bilet</h2>
+                            <button class="w3-button w3-large w3-white" onclick="arttir()">+</button>
+                            <input class="w3-input w3-border" id="sonuc" value="0" type="text" style="width:20%">
+                            <button class="w3-button w3-large w3-white" onclick="azalt()">-</button>
+                    </div>
+                </div>
+
+                <div class="wrap-2">
+                    <input class="input" type="radio" id="tab-2" name="tabs">
+                    <label class="label" for="tab-2"> <div style="color:white;">Koltuk Seçimi </div> <div class="cross"></div></label>
+                    <div class="contentt">
+                        <div style="text-align:center;">
+                            @for (int i = 0; i < 8; i++)
+                            {
+                                <p>
+
+                                    @for (int j = 0; j < 10; j++)
+                                    {
+                                        <img class="koltuk" src="~/Images/koltuk.png">
+                                    }
+
+                                </p>
+                            }
+                            <center>  <p style="border:2px solid white; padding:5px;  text-align:center; width:35%;">Perde</p></center>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+
+                <div class="wrap-4">
+                    <input class="input" type="radio" id="tab-4" name="tabs">
+                    <label class="label" for="tab-4"> <div style="color:white;">Satın Alma </div> <div class="cross"></div></label>
+                    <div class="contentt">
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p><input class="w3-input   w3-black" type="text" placeholder="Name" required name="Name"></p>
+                                <p><input class="w3-input   w3-black"  type="email" placeholder="Email" required name="Email"></p>
+                                <p><input class="w3-input   w3-black"  type="tel" placeholder="Telefon" required name="Subject"></p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><input class="w3-input   w3-black" type="text" placeholder="Kredi Kart No" required name="Name"></p>
+                                <p><input class="w3-input   w3-black" type="text" placeholder="Kredikartı Son Geçerlilik Tarihi" required name="sonTarih"></p>
+                                <p><inputclass="w3-input  w3-black" type="text" placeholder="CCV" required name="Subject"></p>
+                                <button type="button" class="btn btn-outline-light btn-lg btn-block" data-toggle="modal" data-target="#myModal2">SAtın Al</button>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade " id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content  bg-dark">
+            <div class="modal-header"><h4 class="modal-title text-light"><span>&#9888;</span> Uyarı</h4></div>
+            <div class="modal-body text-light">İşlemleriniz iptal edilecektir</div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger  " onclick="closeNav()"  class="close" data-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn btn-success" data-dismiss="modal">Devam</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade " id="myModal2">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header"><h4 class="modal-title text-light"><span>&#9888;</span> Bilet Bilgileri</h4></div>
+            <div class="modal-body ">
+                Bilet bilgileriniz mail adresinize atılmıştır.
+                <img src="~/Images/qr.jpg" />
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger  " onclick="closeNav()" class="close" data-dismiss="modal">Tamam</button>
+            </div>
+        </div>
+    </div>
+</div>
+

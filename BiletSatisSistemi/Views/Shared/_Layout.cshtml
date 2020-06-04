@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="~/Css/style.css" rel="stylesheet" />
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <script src="~/Scripts/Script.js"></script>
+</head>
+
+<body class="w3-black">
+
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+     <img src="~/Images/ticket.png"  style="width:100%">
+
+        <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button w3-padding-large w3-black w3-allerta">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>Ansayfa</p>
+        </a>
+        <a href="@Url.Action("Events","Home")" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-allerta">
+            <i class="fa fa-calendar w3-xxlarge"></i>
+            <p>Etkinlikler</p>
+        </a>
+        <a href="@Url.Action("Contact","Home")" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-allerta">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>İletişim</p>
+        </a>
+    </nav>
+
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-button" style="width:25% !important">HOME</a>
+            <a href="#about" class=" w3-button" style="width:25% !important">ABOUT</a>
+            <a href="#photos" class="w3-button" style="width:25% !important">PHOTOS</a>
+            <a href="Contac.html" class=" w3-button" style="width:25% !important">CONTACT</a>
+        </div>
+    </div>
+
+     @RenderBody()
+    <footer class="container  w3-text-white w3-xxlarge " style=" margin-left:10%; bottom: 0px; ">
+        <i class="fa fa-facebook-official w3-hover-opacity "></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium mt-2">Powered by Şahin Bölükbaşı <span class="Sozlesme"> <a class="Sozlesme" href="">Gizlilik</a> <a class="Sozlesme" href="">Kullanım Koşulları</a> <a class="Sozlesme" href="">Mesafeli Bilet Satış Sözleşmesi</a></span>  </p>
+    </footer>
+</body>
+</html>
